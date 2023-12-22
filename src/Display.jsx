@@ -5,7 +5,7 @@ function Display() {
   return (
     <img
       src="https://images.pexels.com/photos/19468468/pexels-photo-19468468/free-photo-of-rocky-mountain-peaks-during-snowstorm.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
-      width="200"
+      width="400"
       height="200"
     ></img>
   );
