@@ -21,9 +21,11 @@ function ProductList() {
   return (
     <div>
       <h1 className="font-semibold">Products</h1>
-      {products.map(function (item) {
-        return <ProductItem item/*data*/ ={item}/>
-      })}
+      <div className="grid grid-cols-3">
+        {products.map(function (item) {
+          return <ProductItem item /*data*/={item} />;
+        })}
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <div>
-      <footer>copyright @ Grocer's Yard</footer>
+      <footer className="text-center bg-gray-800 text-white">copyright @ Grocer's Yard</footer>
     </div>
   );
 }
