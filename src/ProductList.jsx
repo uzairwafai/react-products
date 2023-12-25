@@ -23,7 +23,7 @@ function ProductList() {
       <h1 className="font-semibold">Products</h1>
       <div className="grid grid-cols-3">
         {products.map(function (item) {
-          return <ProductItem item /*data*/={item} />;
+          return <ProductItem key={item.id} item /*data*/={item} />;
         })}
       </div>
     </div>

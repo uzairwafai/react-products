@@ -5,11 +5,13 @@ import MainArea from "./MainArea";
 import { PI, add as addition } from "./math";
 import ProductList from "./ProductList";
 import Counter from "./Counter";
+import Users from "./Users";
 
 function App() {
   return (
     <div>
       <Header></Header>
+      <Users />
       <Display />
       <h1>{PI}</h1>
       <h3>{addition(2, 10)}</h3>
