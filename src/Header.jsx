@@ -3,7 +3,7 @@ import React from "react";
 function Header() {
   // <h1>Header</h1>
   return (
-    <header className="bg-orange-500 flex justify-between">
+    <header className="bg-gray-800 flex justify-between">
       <div className="flex">
         <svg
           xmlns="http://www.w3.org/2000/svg"
