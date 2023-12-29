@@ -6,11 +6,13 @@ import { PI, add as addition } from "./math";
 import ProductList from "./ProductList";
 import Counter from "./Counter";
 import Users from "./Users";
+import BooksProduct from './BooksProduct';
 
 function App() {
   return (
     <div>
       <Header></Header>
+      <BooksProduct />
       <Users />
       <Display />
       <h1>{PI}</h1>

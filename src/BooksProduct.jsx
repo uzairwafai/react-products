@@ -1,12 +1,12 @@
 import React from "react";
 import axios from "axios";
-import UserItem from "./UserItem";
+import BooksItem from "./BooksItem";
 import Error from "../util/Error";
 import Loader from "../util/Loader";
 import ShouldRender from "../util/ShouldRender/ShouldRender";
-class Users extends React.Component {
+class Books extends React.Component {
   state = {
-    users: [],
+    books: [],
     hasError: false,
     loading: true,
   };
@@ -15,9 +15,9 @@ class Users extends React.Component {
     super();
     setTimeout(() => {
       axios
-        .get("https://api.github.com/users")
+        .get("https://books-api-cloud.onrender.com/api/books")
         .then((res) => {
-          this.setState({ users: res.data });
+          this.setState({ books: res.data.data });
         })
         .catch((err) => {
           this.setState({ hasError: true });
@@ -31,7 +31,7 @@ class Users extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="text-xl font-semibold ml-2 mb-4">Github Users</h1>
+        <h1 className="text-xl font-semibold ml-2 mb-4">Own API rendering</h1>
         {/* <div>{this.state.loading ? <Loader /> : null}</div> */}
 
         <ShouldRender cond={this.state.loading}>
@@ -44,9 +44,9 @@ class Users extends React.Component {
         <ShouldRender cond={this.state.hasError}>
           <Error />
         </ShouldRender>
-        <div className="grid grid-cols-4 ml-4">
-          {this.state.users.map((list) => (
-            <UserItem key={list.login} item={list} />
+        <div className=" m-4">
+          {this.state.books.map((list) => (
+            <BooksItem key={list._id} item={list} />
           ))}
         </div>
       </div>
@@ -54,4 +54,4 @@ class Users extends React.Component {
   }
 }
 
-export default Users;
+export default Books;
